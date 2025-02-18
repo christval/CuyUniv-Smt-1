@@ -1,0 +1,105 @@
+<style>
+    *,
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .btn {
+        border: none;
+        padding: 10px;
+        font-weight: 800;
+        cursor: pointer;
+        font-size: 24px;
+        border-radius: 8px;
+    }
+
+    .btn-play {
+        background-color: orange;
+        color: white;
+    }
+
+    .btn-pause {
+        background-color: orange;
+        color: white;
+    }
+
+    .btn-minimize {
+        background-color: orange;
+        color: white;
+    }
+    .btn-fullscreen {
+        background-color: orange;
+        color: white;
+    }
+
+    .container {
+        max-width: 50%;
+        margin: 0 auto;
+        position: relative;
+    }
+    
+    video {
+        display: block;
+        width: 100%;
+        border: 5px solid red;
+    }
+
+    .video-component {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 10px 12px;
+    }
+</style>
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Video</title>
+</head>
+
+<body>
+    <div class="container">
+        <video width="720">
+            <source src="assets/footage.mp4" type="video/mp4" />
+        </video>
+        <div class="video-component">
+            <button onclick="play()" class="btn btn-play">Play</button>
+            <button onclick="pause()" class="btn btn-pause">Pause</button>
+            <button onclick="minimize()" class="btn btn-minimize">Minimize</button>
+            <button onclick="fullscreen()" class="btn btn-fullscreen">Fullscreen</button>
+        </div>
+    </div>
+</body>
+
+<script>
+    const videoComponent = document.querySelector("video")
+    function play() {
+        console.log("playing")
+        videoComponent.play()
+    }
+
+    function pause() {
+        console.log("pause")
+        videoComponent.pause()
+    }
+
+    function minimize() {
+        console.log("minimize")
+        videoComponent.requestPictureInPicture()
+    }
+
+    function fullscreen() {
+        console.log("fullscreen")
+        videoComponent.requestFullscreen()
+    }
+</script>
+
+</html>
