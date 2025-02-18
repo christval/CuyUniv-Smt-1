@@ -1,0 +1,82 @@
+*,
+html {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    
+}
+
+.container-navbar {
+    background-color: rgb(43, 43, 43);
+    width: 100%;
+    height: 10vh;
+}
+
+.ul-navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+}
+.li-navbar {
+    color: #cfcfcf;
+    list-style-type: none;
+    padding: 10px;
+    margin: 5px;
+    font-size: 15px;
+}
+
+#biodata {
+    background-color: red;
+    width: 500px;
+    height: 500px;
+}
+
+.li-navbar:hover {
+    background-color: red;
+    transition: .5s ease-in-out;
+    transition-delay: .3s;
+    border-radius: 8px;
+}
+
+.a-navbar {
+    color: white;
+    text-decoration: none;
+}
+
+.container-content {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #212121;
+}
+
+.a-content {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    width: 720px;
+    height: 480px;
+}
+
+.img-content {
+    width: 50%;
+    height: 50%;
+}
+
+.container-footer {
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(43, 43, 43);
+}
+.h1-footer {
+    font-size: 15px;
+    color: #cfcfcf;
+}
